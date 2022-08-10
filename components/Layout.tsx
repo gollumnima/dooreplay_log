@@ -1,4 +1,7 @@
 import Head from 'next/head';
+import { Footer } from './Footer';
+import { Header } from './Header';
+import { MenuBar } from './MenuBar';
 
 // TODO: meta tag 넣고, title 페이지별로 동적으로 적용하기
 
@@ -7,11 +10,18 @@ type Props = {
 };
 
 const Layout: React.FC<Props> = ({ children }) => (
-  <Head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>토목공사</title>
-    <main>{children}</main>
-  </Head>
+  <>
+    <Header />
+    <main>
+      <h1>🪓 토.목.공.사 🪓</h1>
+      <span>
+        🪓 토공은 블로그 오픈을 기다리며 목빠지게 공사중 🪓
+      </span>
+      {/* <MenuBar /> */}
+      {children}
+    </main>
+    <Footer />
+  </>
 );
 
 export default Layout;
