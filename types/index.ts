@@ -12,8 +12,10 @@ export type ParamType = {
 };
 
 export type PostType = {
-  data: DataType;
+  title: string;
+  date: string;
   content: MDXRemoteSerializeResult<Record<string, unknown>>;
+  description: string;
 };
 
 export type PostContentType = {
