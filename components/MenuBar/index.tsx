@@ -1,22 +1,24 @@
-export const MenuBar = () =>
-// TODO: need to search tailwind css inline style
-// const divStyle = {
-//   'min-height': '120px',
-// };
-  // eslint-disable-next-line implicit-arrow-linebreak
-  (
-    <>
-      <p className="mb-4">
-        <button className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-          Toggle width collapse
-        </button>
-      </p>
-      <div>
-        <div className="collapse collapse-horizontal" id="collapseWidthExample">
-          <div className="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
-            This is some placeholder content for a horizontal collapse.
-          </div>
-        </div>
-      </div>
-    </>
-  );
+type Props = {
+  children: React.ReactElement;
+};
+
+export const MenuBar:React.FC<Props> = ({ children }) => (
+  <div className="bg-base-200 drawer h-52 rounded-lg shadow">
+    <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+    <div className="drawer-content flex flex-col items-center justify-center">
+      <label htmlFor="my-drawer" className="btn btn-primary drawer-button">open menu</label>
+    {children}
+    </div>
+    <div className="drawer-side">
+      <label htmlFor="my-drawer" className="drawer-overlay" />
+      <ul className="menu bg-base-100 text-base-content w-80 overflow-y-auto p-4">
+        <li>
+          <span>Menu Item</span>
+        </li>
+        <li>
+          <span>Menu Item</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+);

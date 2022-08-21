@@ -6,7 +6,7 @@
     "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "gh-pages -d out"
+    "deploy": "next deploy"
   },
   "dependencies": {
     "@mdx-js/loader": "^2.0.0",
@@ -30,7 +30,8 @@
     "@types/react": "17.0.39",
     "@typescript-eslint/eslint-plugin": "^5.14.0",
     "@typescript-eslint/parser": "^5.14.0",
-    "daisyui": "^2.20.0",
+    "autoprefixer": "^10.4.8",
+    "daisyui": "^2.24.0",
     "eslint": "8.9.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^16.1.0",
@@ -40,7 +41,8 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "gh-pages": "^4.0.0",
-    "tailwindcss": "^3.1.6",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8",
     "typescript": "4.5.5"
   }
 }

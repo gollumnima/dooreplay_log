@@ -1,4 +1,3 @@
-import Error from 'next/error';
 import { PostCard } from '~/components/PostCard';
 import { PostContentType, PostsType } from '~/types';
 import getPosts from '~/utils/getPosts';
