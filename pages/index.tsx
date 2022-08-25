@@ -7,17 +7,24 @@ const Main: React.FC<PostsType> = ({ posts }) => (
     <h1>최근 포스트</h1>
     {posts.map((post: PostContentType) => {
       const {
-        slug, title, date, description,
+        slug, data
       } = post;
 
       return (
+        <>
+         <main>
+          <h1>🪓 토.목.공.사 🪓</h1>
+          <span>🪓 토공은 블로그 오픈을 기다리며 목빠지게 공사중 🪓</span>
+         </main>
+         <br />
+         <br />
+         <br />
         <PostCard
           key={slug}
-          title={title}
-          date={date}
-          description={description}
+          data={data}
           slug={slug}
         />
+        </>
       );
     })}
   </div>

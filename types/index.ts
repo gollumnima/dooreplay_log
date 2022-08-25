@@ -20,9 +20,7 @@ export type PostType = {
 
 export type PostContentType = {
   slug: string;
-  title: string;
-  date: string;
-  description: string;
+  data: PostType;
 };
 
 export type PostsType = {
