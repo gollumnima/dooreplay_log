@@ -2,6 +2,7 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { BLOG_URL, TWITTER_USERNAME, SITE_NAME } from '~/constants/name';
+import Favicon from './Favicon';
 
 type Props = {
   pageTitle?: string;
@@ -20,7 +21,6 @@ const Meta: React.FC<Props> = ({ pageTitle }) => {
   const ogImage = BLOG_URL + meta
   
   return (
-    // TODO: favicon... etc
     <Head>
       <title>{ogTitle}</title>
       <meta name="description" content={meta.description} key="description" />
@@ -36,6 +36,9 @@ const Meta: React.FC<Props> = ({ pageTitle }) => {
       <meta property="og:image" content={ogImage} key="ogImage" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content={TWITTER_USERNAME} />
+
+      <Favicon />
+
     </Head>
   )
 }
