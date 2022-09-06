@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { Footer } from './Footer';
-import { Header } from './Header';
 import { MenuBar } from './MenuBar';
 import Meta from './Meta';
 
@@ -8,18 +7,16 @@ import Meta from './Meta';
 
 type Props = {
   children: React.ReactElement;
-  pageTitle?: string;
 };
 
-const Layout: React.FC<Props> = ({ children, pageTitle }) => (
+const Layout: React.FC<Props> = ({ children }) => (
   <>
-    <Meta pageTitle={pageTitle ?? ''} />
-    <Header />  
     <MenuBar>
       {children}
     </MenuBar>
     <Footer />
   </>
+
 );
 
 export default Layout;

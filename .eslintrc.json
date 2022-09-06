@@ -3,7 +3,7 @@
     "airbnb",
     "airbnb-typescript"
   ],
-  "plugins": ["tailwindcss"],
+  "plugins": ["tailwindcss", "eslint-plugin-mdx"],
   "parserOptions": {
     "project": ["./tsconfig.json", "./next.config.js"]
   },
