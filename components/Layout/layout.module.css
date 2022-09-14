@@ -1,0 +1,13 @@
+.layout_container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.layout_box {
+  display: flex;
+}
+
+.content_wrapper {
+  width: 100%;
+}

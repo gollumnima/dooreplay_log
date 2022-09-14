@@ -1,0 +1,25 @@
+.menubar_container {
+  height: calc(100vh - 248px);
+}
+.menubar_box {
+  display: flex;
+  height: 100%;
+  
+}
+
+.menubar_left {
+  width: 60px;
+  background-color: #1E293B;
+  height: 100%;
+}
+
+.clickable {
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.menubar_right {
+  width: 400px;
+  background-color: #0F172A;
+}
+

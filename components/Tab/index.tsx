@@ -8,7 +8,7 @@ const Tab = ({ title, content, isFocused }: TabProps) => (
   <>
     <div className="tab-header">
       {title}
-    </div>
+    </div>  
     {isFocused && (
     <div className="tab-content">
       {content}
