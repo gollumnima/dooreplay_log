@@ -16,12 +16,12 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <Meta />
+        <Meta />       
+        </Head>
           <body>
             <Main />
             <NextScript />
           </body>
-        </Head>
       </Html>
     );
   }

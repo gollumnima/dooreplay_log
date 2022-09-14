@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { BLOG_URL, TWITTER_USERNAME, SITE_NAME } from '~/constants/name';
 import Favicon from './Favicon';
@@ -20,7 +19,7 @@ const Meta: React.FC<Props> = ({ pageTitle }) => {
   const ogImage = BLOG_URL + meta;
 
   return (
-    <Head>
+    <>
       <title>{ogTitle}</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="description" content={meta.description} key="description" />
@@ -37,7 +36,11 @@ const Meta: React.FC<Props> = ({ pageTitle }) => {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content={TWITTER_USERNAME} />
       <Favicon />
-    </Head>
+      <link rel="preconnect" href="https://fonts.googleapis.com" /> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+          <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Myeongjo&display=swap" rel="stylesheet" />
+  
+  </>
   );
 };
 
