@@ -1,11 +1,16 @@
 {
   "extends": [
     "airbnb",
-    "airbnb-typescript"
+    "airbnb-typescript",
+    "eslint:recommended",
+    "plugin:react/recommended"
   ],
-  "plugins": ["tailwindcss", "eslint-plugin-mdx"],
+  "plugins": ["tailwindcss"],
   "parserOptions": {
     "project": ["./tsconfig.json", "./next.config.js"]
+  },
+  "settings": {
+    "mdx/code-blocks": true
   },
   "rules": {
     "no-console": "warn",
@@ -18,5 +23,3 @@
     "import/prefer-default-export": "off"
   }
 }
-
-

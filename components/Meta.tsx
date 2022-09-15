@@ -1,9 +1,10 @@
+import React from 'react';
 import { useRouter } from 'next/router';
 import { BLOG_URL, TWITTER_USERNAME, SITE_NAME } from '~/constants/name';
 import Favicon from './Favicon';
 
 type Props = {
-  pageTitle?: string;
+  pageTitle: string;
 };
 
 const meta = {
@@ -36,10 +37,10 @@ const Meta: React.FC<Props> = ({ pageTitle }) => {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content={TWITTER_USERNAME} />
       <Favicon />
-      <link rel="preconnect" href="https://fonts.googleapis.com" /> 
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-      <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Myeongjo&display=swap" rel="stylesheet" />
-  </>
+      <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Nanum+Myeongjo&display=swap" rel="stylesheet" />
+    </>
   );
 };
 

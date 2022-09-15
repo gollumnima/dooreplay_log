@@ -1,13 +1,13 @@
-.menubar_container {
+.menubarContainer {
   height: calc(100vh - 248px);
 }
-.menubar_box {
+.menubarBox {
   display: flex;
   height: 100%;
   
 }
 
-.menubar_left {
+.menubarLeft {
   width: 60px;
   background-color: #1E293B;
   height: 100%;
@@ -18,7 +18,7 @@
   font-weight: 900;
 }
 
-.menubar_right {
+.menubarRight {
   width: 400px;
   background-color: #0F172A;
 }
