@@ -1,13 +1,16 @@
-.layout_container {
+.layoutContainer {
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
 
-.layout_box {
+.layoutBox {
   display: flex;
 }
 
-.content_wrapper {
+.contentWrapper {
   width: 100%;
+  height: calc(100vh - 248px);
+  overflow: auto;
 }
+

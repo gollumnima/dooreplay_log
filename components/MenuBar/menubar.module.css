@@ -11,15 +11,19 @@
   width: 60px;
   background-color: #1E293B;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.clickable {
-  cursor: pointer;
-  font-weight: 900;
-}
+
 
 .menubarRight {
   width: 400px;
   background-color: #0F172A;
 }
 
+.svgIcon {
+  width: 25px;
+  height: 25px;
+}

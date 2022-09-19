@@ -5,7 +5,7 @@ import getPosts from '~/utils/getPosts';
 import styles from './main.module.css';
 
 const {
-  mainContainer, title, titleLine, mainListGroup, mainList,
+  mainContainer, title, titleLine, mainListGroup,
 } = styles;
 
 const Main = ({ posts }:PostsType) => (
