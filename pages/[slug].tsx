@@ -1,8 +1,8 @@
+import React from 'react';
 import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 import { ParamType, PostType } from '~/types';
-import getPost from '~/utils/getPost';
-import getPosts from '~/utils/getPosts';
+import { getPosts, getPost } from '~/utils/getPosts';
 
 const Post:React.FC<PostType> = ({
   title, date, content,
@@ -20,9 +20,15 @@ export default Post;
 
 export const getStaticPaths = async () => {
   const posts = await getPosts();
-  const paths = posts.map((post) => ({
-    params: { slug: post.slug },
-  }));
+
+  const paths = posts.map((post) => (
+    {
+      params: {
+        slug: post.slug.split('pages/').slice(1)[0],
+      },
+    }
+  ));
+
   return {
     paths,
     fallback: false,

@@ -13,6 +13,7 @@ const TabBar = ({ children, isFocused, title }:PropsWithChildren<TabBarProps>) =
     <div className="tab-container">
       {tabs.map((tab) => (
         <Tab
+          key={tab.title}
           title={title}
           content={tab.title === title ? tab.content : ''}
           isFocused={isFocused}

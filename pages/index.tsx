@@ -1,7 +1,8 @@
 import React from 'react';
 import format from 'date-fns/format';
+import Link from 'next/link';
 import { PostsType } from '~/types';
-import getPosts from '~/utils/getPosts';
+import { getPosts } from '~/utils/getPosts';
 import styles from './main.module.css';
 
 const {
@@ -27,7 +28,7 @@ const Main = ({ posts }:PostsType) => (
         const { data: fileData, slug: url } = post;
         return (
           <React.Fragment key={url}>
-            <a href={`/${url}`}>
+            <a href={url.split('pages/').slice(1)[0]}>
               <li className="underline decoration-wavy decoration-indigo-600">
                 <span>{fileData.title}</span>
                 <span>{fileData.date}</span>

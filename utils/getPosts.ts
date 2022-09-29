@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { getFilesRecursively } from './getFilesRecursively';
 
-const files = getFilesRecursively('posts');
+const files = getFilesRecursively('pages');
 
 export const getPosts = () => {
   const allPostFiles = files.map((fileName) => {
@@ -23,10 +23,8 @@ export const getPosts = () => {
 };
 
 export const getPost = (slug: string) => {
-  console.log({ slug });
   const fileContents = fs.readFileSync(path.join(`${slug}.mdx`), 'utf8');
   const { data, content } = matter(fileContents);
-  console.log({ data });
   return {
     data, content,
   };
