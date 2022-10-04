@@ -7,7 +7,7 @@
   ],
   "plugins": ["tailwindcss"],
   "parserOptions": {
-    "project": ["./tsconfig.json", "./next.config.js"]
+    "project": ["./tsconfig.json", "./next.config.js", "./makePath.js"],
   },
   "settings": {
     "mdx/code-blocks": true

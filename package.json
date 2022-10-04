@@ -2,7 +2,7 @@
   "name": "togong-log",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node makePath.js && NODE_OPTIONS='--inspect' next dev",
     "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
