@@ -22,7 +22,7 @@ const walkDirectory = function(path, obj) {
 
 walkDirectory('./pages', fileTree);
 
-const makePath = () => fs.writeFileSync("structure.json", JSON.stringify(filetree));
+const makePath = () => fs.writeFileSync("structure.json", JSON.stringify(fileTree));
 
 makePath();
 

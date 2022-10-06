@@ -1,6 +1,5 @@
 import React from 'react';
 import format from 'date-fns/format';
-import Link from 'next/link';
 import { PostsType } from '~/types';
 import { getPosts } from '~/utils/getPosts';
 import styles from './main.module.css';
@@ -25,13 +24,13 @@ const Main = ({ posts }:PostsType) => (
     <br />
     <ul className={mainListGroup}>
       {posts.map((post) => {
-        const { data: fileData, slug: url } = post;
+        const { data, slug: url } = post;
         return (
           <React.Fragment key={url}>
             <a href={url.split('pages/').slice(1)[0]}>
               <li className="underline decoration-wavy decoration-indigo-600">
-                <span>{fileData.title}</span>
-                <span>{fileData.date}</span>
+                <span>{data.title}</span>
+                <span>{data.date}</span>
               </li>
             </a>
           </React.Fragment>
@@ -45,6 +44,7 @@ export default Main;
 
 export const getStaticProps = () => {
   const posts = getPosts();
+
   return {
     props: {
       posts,

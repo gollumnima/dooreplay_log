@@ -3,6 +3,9 @@ import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 export type DataType = {
   title: string;
   date: string;
+  description: string;
+  thumbnail: string;
+  tags?: string[]
 };
 
 export type ParamType = {
@@ -12,15 +15,13 @@ export type ParamType = {
 };
 
 export type PostType = {
-  title: string;
-  date: string;
   content: MDXRemoteSerializeResult<Record<string, unknown>>;
-  description: string;
+  frontmatter: DataType;
 };
 
 export type PostContentType = {
   slug: string;
-  data: PostType;
+  data: DataType;
 };
 
 export type PostsType = {

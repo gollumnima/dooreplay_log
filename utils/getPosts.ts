@@ -3,11 +3,11 @@ import fs from 'fs';
 import path from 'path';
 import { getFilesRecursively } from './getFilesRecursively';
 
-const files = getFilesRecursively('pages');
+export const files = getFilesRecursively('pages');
 
 export const getPosts = () => {
   const allPostFiles = files.map((fileName) => {
-    const slug = fileName.replace('.mdx', '');
+    const slug = fileName.replace(/\.mdx/, '');
     const fileContents = fs.readFileSync(
       path.join(`${slug}.mdx`),
       'utf8',
@@ -25,7 +25,15 @@ export const getPosts = () => {
 export const getPost = (slug: string) => {
   const fileContents = fs.readFileSync(path.join(`${slug}.mdx`), 'utf8');
   const { data, content } = matter(fileContents);
+
   return {
-    data, content,
+    content,
+    frontmatter: {
+      slug,
+      title: data.title,
+      date: data.date,
+      description: data.description,
+      ...data,
+    },
   };
 };
