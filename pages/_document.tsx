@@ -12,16 +12,17 @@ class MyDocument extends Document {
     return initialProps;
   }
 
+  // TODO: pageTitle 동적으로 변환하기
   render() {
     return (
       <Html>
         <Head>
-        <Meta />       
+          <Meta pageTitle="" />
         </Head>
-          <body>
-            <Main />
-            <NextScript />
-          </body>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
       </Html>
     );
   }
