@@ -6,7 +6,7 @@ type TabBarProps = {
   title: string;
 };
 
-const TabBar = ({ children, isFocused, title }:PropsWithChildren<TabBarProps>) => {
+const TabBar = ({ isFocused, title }:PropsWithChildren<TabBarProps>) => {
   const tabs = [{ title: '제목1', content: 'MDX다' }];
   return (
   // tabs를 어떻게 가져와야 할까 고민해보자.

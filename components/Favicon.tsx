@@ -1,4 +1,4 @@
-const Favicon = (): JSX.Element => (
+const Favicon = () => (
   <>
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png" />

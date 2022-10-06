@@ -1,6 +1,5 @@
-export const Drawer = () => {
-  return (
-    <div className="bg-base-200 drawer h-screen rounded-lg shadow">
+export const Drawer = () => (
+  <div className="bg-base-200 drawer h-screen rounded-lg shadow">
     <input id="my-drawer" type="checkbox" className="drawer-toggle" />
     <div className="drawer-content flex flex-col items-center justify-center">
       {/* <label htmlFor="my-drawer" className="btn btn-primary drawer-button">open menu</label> */}
@@ -14,7 +13,7 @@ export const Drawer = () => {
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 mr-2 stroke-current">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
             </svg>
-            Posts  
+            Posts
           </a>
         </li>
         <ul className="menu bg-base-100 text-base-content w-80 overflow-y-auto p-4">
@@ -33,5 +32,4 @@ export const Drawer = () => {
       </ul>
     </div>
   </div>
-  )
-}
+);

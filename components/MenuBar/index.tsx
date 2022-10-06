@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import styles from './menubar.module.css';
-import structure from '../../structure.json';
 import Files from '../Files';
-import getFilePathRecursively from '~/utils/getFilePathRecursively';
+// import structure from '../../structure.json';
+// import getFilePathRecursively from '~/utils/getFilePathRecursively';
 
 const {
   menubarContainer, menubarBox, menubarLeft, menubarRight, svgIcon,

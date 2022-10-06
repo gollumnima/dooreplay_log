@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import type { AppProps } from 'next/app';
 import { MDXProvider } from '@mdx-js/react';
 import Layout from '~/components/Layout';
