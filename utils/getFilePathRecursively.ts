@@ -27,7 +27,6 @@ const getFilePathRecursively = (data: any) => {
         title: key,
         sub: data[key],
       });
-      console.log('herer!');
     }
   }
 
