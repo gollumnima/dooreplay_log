@@ -8,8 +8,7 @@ class MyDocument extends Document {
     ctx: DocumentContext,
   ): Promise<DocumentInitialProps> {
     const initialProps = await Document.getInitialProps(ctx);
-
-    return initialProps;
+    return { ...initialProps };
   }
 
   // TODO: pageTitle 동적으로 변환하기

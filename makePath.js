@@ -9,7 +9,6 @@ const walkDirectory = function(path, obj) {
     const target = path + '/' + name;
     const stats = fs.statSync(target);
     if (stats.isFile()) {
-      console.log(name,'name')
       if (name.slice(-3) === 'mdx') {
         obj[name] = target;
       }

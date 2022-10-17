@@ -8,7 +8,7 @@ const {
   mainContainer, title, titleLine, mainListGroup,
 } = styles;
 
-const Main = ({ posts }:PostsType) => (
+const Main = ({ posts }:any) => (
   <div className={mainContainer}>
     {/* // 날짜 형식은 어떻게 할지 다음에 고민해보지 뭐~~ */}
     <h1 className={title}>{format(new Date(), 'MMMM y')}</h1>
@@ -24,10 +24,11 @@ const Main = ({ posts }:PostsType) => (
     <br />
     <ul className={mainListGroup}>
       {posts.map((post) => {
-        const { data, slug: url } = post;
+        const { data, slug } = post;
+        const url = slug.join('/');
         return (
           <React.Fragment key={url}>
-            <a href={url.split('pages/').slice(1)[0]}>
+            <a href={url}>
               <li className="underline decoration-wavy decoration-indigo-600">
                 <span>{data.title}</span>
                 <span>{data.date}</span>
@@ -42,9 +43,16 @@ const Main = ({ posts }:PostsType) => (
 
 export default Main;
 
-export const getStaticProps = () => {
-  const posts = getPosts();
-
+export const getStaticProps = async () => {
+  const posts = await getPosts();
+  const paths = await posts.map((post) => (
+    {
+      params: {
+        slug: [post.slug],
+      },
+    }
+  ));
+  // console.log(JSON.stringify(paths, null, 2));
   return {
     props: {
       posts,
