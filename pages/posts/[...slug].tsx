@@ -9,9 +9,10 @@ import { SerializedPost } from '~/types';
 
 const ViewPost = ({ post }: { post: SerializedPost }) => (
   <div>
-    <h1 className="font-bold text-7xl mt-24 mb-12">{post.meta.title ?? ''}</h1>
+    <h1 className="font-bold text-4xl mt-24 mb-12">{post.meta.title ?? ''}</h1>
     <time className="text-gray-500 italic">{post.meta.date ?? ''}</time>
-    <Image width={800} src={post.meta.thumbnail} alt="thumbnail" />
+    { post.meta.thumbnail
+    && <Image width={800} height={600} src={post.meta.thumbnail} alt="thumbnail" />}
     <MDXRemote {...post.content} />
   </div>
 );
