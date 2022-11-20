@@ -1,6 +1,6 @@
 import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
-export type DataType = {
+export type PostMeta = {
   title: string;
   date: string;
   description: string;
@@ -8,22 +8,15 @@ export type DataType = {
   tags?: string[]
 };
 
-export type ParamType = {
-  params: {
-    slug: string;
-  }
-};
+export interface PostListItem {
+  slug: string[];
+  meta: PostMeta;
+}
 
-export type PostType = {
+export interface Post extends PostListItem {
+  content: string;
+}
+
+export interface SerializedPost extends PostListItem {
   content: MDXRemoteSerializeResult<Record<string, unknown>>;
-  frontmatter: DataType;
-};
-
-export type PostContentType = {
-  slug: string;
-  data: DataType;
-};
-
-export type PostsType = {
-  posts: PostContentType[]
-};
+}

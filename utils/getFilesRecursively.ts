@@ -24,4 +24,4 @@ export const getFilesInFolder = (rootPath: string) => fs
   .map((filePath) => path.normalize(path.join(rootPath, filePath)));
 
 export const getFilesRecursively = (rootPath: string) => getAllSubFolders(rootPath)
-  . reduce((result, folder) => [...result, ...getFilesInFolder(folder)], [] as string[]);
+  .reduce<string[]>((result, folder) => [...result, ...getFilesInFolder(folder)], []);
