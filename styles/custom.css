@@ -1,9 +1,31 @@
 h2 {
-  font-weight: 700;
+  font-weight: 800;
   font-size: 1.5em;
 }
 
 h3 {
-  font-weight: 700;
+  font-weight: 800;
   font-size: 1.2em;
+  color: lightblue;
+  margin-bottom: 5px;
+}
+
+pre {
+  background-color: #1C0398;
+  padding: 10px;
+}
+
+code {
+  font-weight: 800;
+  background-color: #1C0398;
+}
+
+li {
+  list-style: disc;
+  margin: 8px 0 0 24px;
+}
+
+a {
+  font-weight: 900;
+  /* color: #f7ff5f; svg 배경색에 영향을 주는데 얘를 어쩐담~ */
 }

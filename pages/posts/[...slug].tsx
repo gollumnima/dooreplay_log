@@ -8,12 +8,14 @@ import { getPosts, getPost } from '~/utils/getPosts';
 import { SerializedPost } from '~/types';
 
 const ViewPost = ({ post }: { post: SerializedPost }) => (
-  <div>
-    <h1 className="font-bold text-4xl mt-24 mb-12">{post.meta.title ?? ''}</h1>
+  <div className="px-12">
+    <h1 className="font-bold text-4xl mt-24 mb-2">{post.meta.title ?? ''}</h1>
     <time className="text-gray-500 italic">{post.meta.date ?? ''}</time>
     { post.meta.thumbnail
     && <Image width={800} height={600} src={post.meta.thumbnail} alt="thumbnail" />}
-    <MDXRemote {...post.content} />
+    <div className="lg mt-6">
+      <MDXRemote {...post.content} />
+    </div>
   </div>
 );
 

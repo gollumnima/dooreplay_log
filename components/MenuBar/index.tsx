@@ -57,7 +57,7 @@ export const MenuBar = () => {
     <nav className={menubarContainer}>
       <div className={menubarBox}>
         <ul className={`${menubarLeft} mt-6`}>
-          <li className="mb-2">
+          <li className="mb-2 list-none ml-0">
             <button
               type="button"
               onClick={() => setIsOpenMenu(!isOpenMenu)}
@@ -72,7 +72,7 @@ export const MenuBar = () => {
               </svg>
             </button>
           </li>
-          <li className="mb-2">
+          <li className="mb-2 list-none ml-0">
             <button
               type="button"
             >
@@ -86,7 +86,7 @@ export const MenuBar = () => {
               </svg>
             </button>
           </li>
-          <li className="mb-2">
+          <li className="mb-2 list-none ml-0">
             <a href="https://github.com/gollumnima" target="_blank" rel="noreferrer">
               <button type="button">
                 <svg
@@ -101,7 +101,7 @@ export const MenuBar = () => {
               </button>
             </a>
           </li>
-          <li className="mb-2">
+          <li className="mb-2 list-none ml-0">
             <Link href="/">
               <button type="button">
                 <svg
