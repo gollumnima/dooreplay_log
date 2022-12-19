@@ -5,6 +5,7 @@
 
 const nextConfig = {
   reactStrictMode: true,
+  trailingSlash: true,
   images: {
     loader: 'akamai',
     path: '/thumbnails/',

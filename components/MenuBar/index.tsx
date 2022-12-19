@@ -23,6 +23,10 @@ export const MenuBar = () => {
               title: '20220915_get_what.mdx',
               path: './pages/posts/backend/20220915_get_what.mdx',
             },
+            {
+              title: '20221218_s3_migration.mdx',
+              path: './pages/posts/backend/20221218_s3_migration.mdx',
+            },
           ],
         },
         { title: 'frontend', sub: [] },

@@ -1,1 +1,5 @@
-{"posts":{"backend":{"20220915_get_what.mdx":"./pages/posts/backend/20220915_get_what.mdx"},"retrospective":{"20220824_work_together.mdx":"./pages/posts/retrospective/20220824_work_together.mdx","20220825_migration.mdx":"./pages/posts/retrospective/20220825_migration.mdx","20220917_excelcon.mdx":"./pages/posts/retrospective/20220917_excelcon.mdx"}}}
+{
+  "posts":{
+    "backend":{
+      "20220915_get_what.mdx":"./pages/posts/backend/20220915_get_what.mdx",
+      "20221218_s3_migration.mdx":"./pages/posts/backend/20221218_s3_migration.mdx"},"frontend":{},"retrospective":{"20220824_work_together.mdx":"./pages/posts/retrospective/20220824_work_together.mdx","20220825_migration.mdx":"./pages/posts/retrospective/20220825_migration.mdx","20220917_excelcon.mdx":"./pages/posts/retrospective/20220917_excelcon.mdx"}}}

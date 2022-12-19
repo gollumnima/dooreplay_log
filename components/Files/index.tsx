@@ -16,6 +16,8 @@ const RecursiveNode = ({ title, sub, path = [] }: TreeDepth) => {
       : setIsClicked([]);
   };
 
+  console.log(path, 'vpath');
+  console.log(!!path.length, '뭘까');
   return (
     <div>
       {!!path.length
