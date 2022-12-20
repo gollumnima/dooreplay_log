@@ -87,7 +87,7 @@ export const MenuBar = () => {
             </button>
           </li>
           <li className="mb-2 list-none ml-0">
-            <a href="https://github.com/gollumnima" target="_blank" rel="noreferrer">
+            <a href="https://github.com/gollumnima" target="_blank" rel="noreferrer" style={{ color: 'inherit' }}>
               <button type="button">
                 <svg
                   className={`fill-current ${svgIcon}`}

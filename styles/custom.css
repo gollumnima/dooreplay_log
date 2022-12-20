@@ -16,8 +16,11 @@ pre {
 }
 
 code {
+  font-size: 0.85em;
   font-weight: 800;
   background-color: #1C0398;
+  padding: 5px 7px;
+  border-radius: 5px;
 }
 
 li {
@@ -27,5 +30,5 @@ li {
 
 a {
   font-weight: 900;
-  /* color: #f7ff5f; svg 배경색에 영향을 주는데 얘를 어쩐담~ */
+  color: #f7ff5f;
 }
