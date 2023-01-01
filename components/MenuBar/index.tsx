@@ -1,55 +1,16 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import styles from './menubar.module.css';
-import Files from '../Files';
-// import structure from '../../structure.json';
-// import getFilePathRecursively from '~/utils/getFilePathRecursively';
+import { RecursiveNode } from '../Files';
+import getFilePathRecursively from '~/utils/getFilePathRecursively';
+import { StructureItem, structure } from '~/structure';
 
 const {
   menubarContainer, menubarBox, menubarLeft, menubarRight, svgIcon,
 } = styles;
 
 export const MenuBar = () => {
-  // TODO: 빠른 시일 내에 로직 더 다듬고 수정하기
   // const menuTree = getFilePathRecursively(structure);
-  const menuTree = [
-    {
-      title: 'posts',
-      sub: [
-        {
-          title: 'backend',
-          sub: [
-            {
-              title: '20220915_get_what.mdx',
-              path: './pages/posts/backend/20220915_get_what.mdx',
-            },
-            {
-              title: '20221218_s3_migration.mdx',
-              path: './pages/posts/backend/20221218_s3_migration.mdx',
-            },
-          ],
-        },
-        { title: 'frontend', sub: [] },
-        {
-          title: 'retrospective',
-          sub: [
-            {
-              title: '20220824_work_together.mdx',
-              path: './pages/posts/retrospective/20220824_work_together.mdx',
-            },
-            {
-              title: '20220825_migration.mdx',
-              path: './pages/posts/retrospective/20220825_migration.mdx',
-            },
-            {
-              title: '20220917_excelcon.mdx',
-              path: './pages/posts/retrospective/20220917_excelcon.mdx',
-            },
-          ],
-        },
-      ],
-    },
-  ];
 
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
@@ -120,7 +81,7 @@ export const MenuBar = () => {
         {isOpenMenu
           && (
           <div className={menubarRight}>
-            <Files sub={menuTree} />
+            <RecursiveNode defaultOpenDepth={0} path={[]} item={structure} />
           </div>
           )}
       </div>

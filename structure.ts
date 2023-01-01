@@ -1,4 +1,7 @@
-{
+/* eslint-disable */
+import { StructureItem } from './structure.types';
+export type { StructureItem } from './structure.types';
+export const structure: StructureItem = {
   "name": "posts",
   "path": [
     "posts"
@@ -98,4 +101,4 @@
       ]
     }
   ]
-}
+};

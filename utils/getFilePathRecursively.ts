@@ -8,10 +8,21 @@ type Result = {
   sub: (ResultItem | Result)[];
 };
 
+type BaseStructureItem = {
+  name: string;
+  path: string;
+  isFolder: boolean;
+}
+
+export type StructureItem = 
+| (BaseStructureItem & { isFolder: true; children: StructureItem[] })
+| (BaseStructureItem & { isFolder: false });
+
 const treeStructure: Result[] = [];
 
 // TODO: 값이 잘 나오게 리팩토링 하기 꼭!!!!! 하드 코딩 시러!!
 const getFilePathRecursively = (data: any) => {
+  console.log({ data });
   // eslint-disable-next-line no-restricted-syntax
   for (const [key] of Object.entries(data)) {
     // console.log(getFilePathRecursively(data[key]), '????');
