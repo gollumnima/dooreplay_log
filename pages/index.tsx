@@ -14,8 +14,7 @@ const Main = ({ posts }: { posts: PostListItem[] }) => (
     <h1 className={title}>{format(new Date(), 'MMMM y')}</h1>
     <hr className={titleLine} />
     <main>
-      <h1>🪓 토.목.공.사 🪓</h1>
-      <span>🪓 토공은 블로그 오픈을 기다리며 목빠지게 공사중 🪓</span>
+      <h1>🪓 아직 고칠게 많은 공사 중인 블로그 🪓</h1>
     </main>
     <br />
     <br />

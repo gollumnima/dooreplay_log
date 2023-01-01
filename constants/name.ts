@@ -1,3 +1,3 @@
-export const BLOG_URL = 'https://www.dooreplay.com';
-export const SITE_NAME = '토공로그';
-export const TWITTER_USERNAME = 'sudokeepcoding';
+export const BLOG_URL = 'https://blog.dooreplay.com';
+export const SITE_NAME = 'dooreplay로그';
+export const TWITTER_USERNAME = 'dooreplay';

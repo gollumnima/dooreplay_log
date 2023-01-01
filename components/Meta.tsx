@@ -8,7 +8,7 @@ type Props = {
 };
 
 const meta = {
-  description: '토공의 블로그입니다. 개발계의 토끼공주가 되는게 목표입니다',
+  description: 'dooreplay의 블로그입니다. 저만의 속도로 찬찬히 재밌게 개발해나가고 있습니다.',
   // ogImagePath: '/assets/card-image.webp',
 };
 
@@ -16,7 +16,7 @@ const Meta: React.FC<Props> = ({ pageTitle }) => {
   const router = useRouter();
   const ogUrl = router ? BLOG_URL + router.asPath : BLOG_URL;
   const ogType = router?.pathname === '/' ? 'website' : 'article';
-  const ogTitle = pageTitle || '토목공사';
+  const ogTitle = pageTitle || 'dooreplay log';
   const ogImage = BLOG_URL + meta;
 
   return (
@@ -26,6 +26,7 @@ const Meta: React.FC<Props> = ({ pageTitle }) => {
       <meta name="description" content={meta.description} key="description" />
       <meta property="og:url" content={ogUrl} />
       <meta property="og:type" content={ogType} />
+      <meta property="og:image" content="https://raw.githubusercontent.com/gollumnima/dooreplay_log/main/public/images/og_image.png" key="ogImage" />
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:title" content={ogTitle} />
       <meta
@@ -33,9 +34,12 @@ const Meta: React.FC<Props> = ({ pageTitle }) => {
         content={meta.description}
         key="ogDescription"
       />
-      <meta property="og:image" content={ogImage} key="ogImage" />
+      <meta name="twitter:creator" content="@dooreplay" />
+      <meta name="twitter:site" content="@dooreplay" />
+      <meta name="twitter:url" content="https://blog.dooreplay.com/" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content={TWITTER_USERNAME} />
+      <meta name="twitter:title" content="dooreplay log입니다. 아직 공사중입니다~" />
+      <meta name="twitter:image" content="https://raw.githubusercontent.com/gollumnima/dooreplay_log/main/public/images/og_image.png" />
       <Favicon />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
