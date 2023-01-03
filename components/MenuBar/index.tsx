@@ -1,30 +1,27 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import styles from './menubar.module.css';
 import { RecursiveNode } from '../Files';
-import getFilePathRecursively from '~/utils/getFilePathRecursively';
-import { StructureItem, structure } from '~/structure';
+import { structure } from '~/structure';
+import styles from './menubar.module.css';
 
 const {
   menubarContainer, menubarBox, menubarLeft, menubarRight, svgIcon,
 } = styles;
 
 export const MenuBar = () => {
-  // const menuTree = getFilePathRecursively(structure);
-
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   return (
     <nav className={menubarContainer}>
       <div className={menubarBox}>
-        <ul className={`${menubarLeft} mt-6`}>
+        <ul className={`${menubarLeft} pt-6`}>
           <li className="mb-2 list-none ml-0">
             <button
               type="button"
               onClick={() => setIsOpenMenu(!isOpenMenu)}
             >
               <svg
-                className={`fill-current ${svgIcon}`}
+                className={`${isOpenMenu ? 'fill-accent-focus' : 'fill-current'} ${svgIcon}`}
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
                 viewBox="0 0 298.757 298.757"
@@ -80,7 +77,7 @@ export const MenuBar = () => {
         </ul>
         {isOpenMenu
           && (
-          <div className={menubarRight}>
+          <div className={`${menubarRight} pt-4`}>
             <RecursiveNode defaultOpenDepth={0} path={[]} item={structure} />
           </div>
           )}

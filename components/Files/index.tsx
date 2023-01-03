@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { StructureItem, structure } from '~/structure';
 import { TreeNodeProps, TreeDepth } from './types';
 import styles from './files.module.css';
 import { FileIcon, FolderIcon } from './styles';
-
-const { fileIcon } = styles;
 
 export type Props = {
   defaultOpenDepth: number;
@@ -15,6 +14,9 @@ export type Props = {
 
 export const RecursiveNode = ({ item, path, defaultOpenDepth }: Props) => {
   const isDefaultOpen = item.path.length <= defaultOpenDepth + 1;
+  const router = useRouter();
+  const asPathList = router.asPath.split('/');
+
   const [isOpen, setIsOpen] = useState(isDefaultOpen);
   const [isClicked, setIsClicked] = useState<number[]>([]);
 
@@ -27,17 +29,16 @@ export const RecursiveNode = ({ item, path, defaultOpenDepth }: Props) => {
   };
 
   if (!item.isFolder) {
+    const isCurrentPage = asPathList.includes(item.name.split('.mdx')[0]);
     return (
       <Link href={`/${item.path.join('/')}`}>
         <button type="button" className="ml-4 flex items-center">
           <FileIcon />
-          <span>{item.name}</span>
+          <span className={`${isCurrentPage ? 'text-accent-focus' : 'text-inherit'}`}>{item.name}</span>
         </button>
       </Link>
     );
   }
-
-  console.log(path.length, 'leng');
 
   return (
     <div className="ml-4">
@@ -50,7 +51,6 @@ export const RecursiveNode = ({ item, path, defaultOpenDepth }: Props) => {
       >
         <FolderIcon flag={!!path.length} />
         <span>{item.name}</span>
-        {/* // TODO: 클릭하면 해당 경로로 갈 수 있게 바꾸기 */}
       </div>
       {isOpen && (
         <div className="nav-tree-node-children">
