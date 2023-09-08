@@ -5,7 +5,6 @@
     "eslint:recommended",
     "plugin:react/recommended"
   ],
-  "plugins": ["tailwindcss"],
   "parserOptions": {
     "project": "./tsconfig.eslint.json"
   },
